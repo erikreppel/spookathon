@@ -9,7 +9,7 @@ spook.on('connection', function(socket) {
 	console.log('another spook has entered the game!');
 	socket.on('sendSpook', function(aSpook) {
 		console.log('someone sent a spook');
-		socket.emit('spook', aSpook);
+		spook.emit('spook', aSpook);
 	});
 });
 
